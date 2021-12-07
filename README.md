@@ -12,7 +12,8 @@ It now can send heartbeats and receive messages formatted like
 {
   "r": 100,
   "g": 0,
-  "b": 122
+  "b": 122,
+  "timeoutMs": 1000 // optional
 }
 ```
 

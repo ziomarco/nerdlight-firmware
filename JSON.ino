@@ -2,7 +2,7 @@
 
 void control_light_from_json(char *json_string)
 {
-    StaticJsonDocument<64> payload;
+    StaticJsonDocument<128> payload;
 
     DeserializationError error = deserializeJson(payload, json_string);
 
@@ -16,5 +16,13 @@ void control_light_from_json(char *json_string)
     int r = payload["r"];
     int g = payload["g"];
     int b = payload["b"];
+    int msTimeout = payload["msTimeout"];
+
     color(r, g, b);
+
+    if (msTimeout > 0)
+    {
+        delay(msTimeout);
+        light_off();
+    }
 }

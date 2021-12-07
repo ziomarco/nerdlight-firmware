@@ -59,7 +59,7 @@ void setup()
   setup_pins();
   WiFi.mode(WIFI_STA);
   light_red();
-  isWifiConnected = wifiManager.autoConnect("MagicLed");
+  isWifiConnected = wifiManager.autoConnect("NerdLight");
   if (isWifiConnected)
   {
     light_yellow();
