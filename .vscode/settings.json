@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "iterator": "cpp",
+        "algorithm": "cpp",
+        "fstream": "cpp",
+        "random": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp",
+        "bitset": "cpp",
+        "ostream": "cpp",
+        "tuple": "cpp",
+        "__tree": "cpp"
+    }
+}
