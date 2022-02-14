@@ -22,7 +22,7 @@ void message_received_callback(char *topic, byte *payload, unsigned int length)
   }
   control_light_from_json(message);
 }
-const char *AWS_endpoint = "a3l1l7s5ulqonx-ats.iot.eu-west-1.amazonaws.com"; // Edit your AWS Endpoint here
+const char *AWS_endpoint = "{{VARS_AWS_ENDPOINT}}"; // Edit your AWS Endpoint here
 PubSubClient mqttClient(AWS_endpoint, 8883, message_received_callback, espWiFiClient);
 
 // MQTT TOPIC INIT
@@ -43,9 +43,9 @@ void get_mac_address()
 }
 
 // Lights
-uint8_t R_Pin = D1;
-uint8_t G_Pin = D2;
-uint8_t B_Pin = D6;
+uint8_t R_Pin = {{VARS_R_PIN}};
+uint8_t G_Pin = {{VARS_G_PIN}};
+uint8_t B_Pin = {{VARS_B_PIN}};
 
 char topicPub[18];
 char topicSub[18];
@@ -105,7 +105,6 @@ void loop()
   if (millis() - lastTime > 5000)
   {
     send_heartbeat();
-    activity_led();
     lastTime = millis();
   }
 }
