@@ -38,6 +38,8 @@ Basic actions done:
 - https://github.com/esp8266/Arduino/releases/tag/2.7.4
 - https://github.com/tzapu/WiFiManager
 
+2b) If you want to use Makefile please substitute in Makefile appropriate bin values
+
 3) Upload SPIFF data on NodeMCU
 [Follow this tutorial](https://nerdyelectronics.com/upload-files-to-esp8266-spiffs/)
 
